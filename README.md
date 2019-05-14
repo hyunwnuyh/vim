@@ -1,2 +1,1 @@
-# vim
-vim settings
+# hyunwnuyh's NeoVim settings

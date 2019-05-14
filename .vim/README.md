@@ -1,1 +1,0 @@
-# hyunwnuyh's NeoVim settings
