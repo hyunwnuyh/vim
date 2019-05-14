@@ -12,6 +12,7 @@ airline-accents	airline.txt	/*airline-accents*
 airline-advanced-customization	airline.txt	/*airline-advanced-customization*
 airline-ale	airline.txt	/*airline-ale*
 airline-autocommands	airline.txt	/*airline-autocommands*
+airline-bookmark	airline.txt	/*airline-bookmark*
 airline-branch	airline.txt	/*airline-branch*
 airline-bufferline	airline.txt	/*airline-bufferline*
 airline-capslock	airline.txt	/*airline-capslock*
