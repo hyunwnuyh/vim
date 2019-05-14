@@ -121,9 +121,9 @@ noremap <silint> <c-d> :call smooth_Scroll#down(&scroll, 10, 3)<CR>
 let delimitMate_expand_cr=1
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Syntastic
@@ -157,4 +157,20 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 " customize keymapping
 map <Leader>cc <plug>NERDComToggleComment
-map <LEader>c<space> <plug>NERDComComment
+map <Leader>c<space> <plug>NERDComComment
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_key_list_select_completion = ['<S-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<S-k>', '<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_warning_symbol = '>*'
+let g:ycm_semantic_triggers = { 'c': [ 're!.' ] }
+
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>gg :YcmCompleter GoToImprecise<CR>
+nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>p :YcmCompleter GetParent<CR>
+
