@@ -29,13 +29,20 @@ rm -r ~/.vim/bundle/*
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 if ! [ -f ~/.bash_aliases ] ; then
     touch ~/.bash_aliases
-        echo "alias vi=\"nvim\"" >>~/.bash_aliases
-        echo "alias vim=\"nvim\"" >>~/.bash_aliases
+    echo "alias vi=\"nvim\"" >>~/.bash_aliases
+    echo "alias vim=\"nvim\"" >>~/.bash_aliases
 else
+<<<<<<< HEAD
     if ! [ grep "alias vi=\"nvim\"" ~/.bash_aliases ] ;then
         echo "alias vi=\"nvim\"" >>~/.bash_aliases
     fi
     if ! [ grep "alias vim=\"nvim\"" ~/.bash_aliases ] ;then
+=======
+    if ! grep -q "alias vi=\"nvim\"" ~/.bash_aliases ;then
+        echo "alias vi=\"nvim\"" >>~/.bash_aliases
+    fi
+    if ! grep -q "alias vim=\"nvim\"" ~/.bash_aliases ;then
+>>>>>>> 0e0403334d3c42a451030dfef44035223b22814e
         echo "alias vim=\"nvim\"" >>~/.bash_aliases
     fi
 fi
