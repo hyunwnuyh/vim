@@ -26,15 +26,15 @@ sudo chmod 777 ~/.vimrc
 sudo chmod 777 postinstall.sh
 rm -r ~/.vim/bundle/*
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-if ! [ -f ~/.bash_aliases] ; then
+if ! [ -f ~/.bash_aliases ] ; then
     touch ~/.bash_aliases
-        echo "alias vi=\"nvim\"" >>~/.bash_aliases
-        echo "alias vim=\"nvim\"" >>~/.bash_aliases
+    echo "alias vi=\"nvim\"" >>~/.bash_aliases
+    echo "alias vim=\"nvim\"" >>~/.bash_aliases
 else
-    if ! [grep "alias vi=\"nvim\"" ~/.bash_aliases] ;then
+    if ! grep -q "alias vi=\"nvim\"" ~/.bash_aliases ;then
         echo "alias vi=\"nvim\"" >>~/.bash_aliases
     fi
-    if ! [grep "alias vim=\"nvim\"" ~/.bash_aliases] ;then
+    if ! grep -q "alias vim=\"nvim\"" ~/.bash_aliases ;then
         echo "alias vim=\"nvim\"" >>~/.bash_aliases
     fi
 fi
